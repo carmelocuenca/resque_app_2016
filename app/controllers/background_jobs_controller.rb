@@ -5,7 +5,7 @@ class BackgroundJobsController < ApplicationController
       Resque.enqueue(ResqueJob, i) # RescueJob es el nombre del worker
 
       # simulate some time between requests
-      sleep 1.5
+      sleep 0.2
     end
   end
 end
