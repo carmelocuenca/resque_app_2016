@@ -39,6 +39,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'foreman'
 end
 
 group :development, :test do
@@ -57,5 +58,8 @@ group :production do
   gem 'rails_12factor'
 end
 gem 'puma'
+gem 'resque'
+gem 'redis'
+
 
 
