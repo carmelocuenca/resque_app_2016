@@ -1,3 +1,5 @@
+require 'resque/server'
+
 Rails.application.routes.draw do
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -5,6 +7,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'background_jobs#index'
+
+  mount Resque::Server.new, :at => "/resque"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
